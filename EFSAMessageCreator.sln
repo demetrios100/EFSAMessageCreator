@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFSAMessageCreator", "EFSAMessageCreator\EFSAMessageCreator.csproj", "{4161C2CB-0259-4334-93A6-17DB59E0F623}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Chemicals|Any CPU = Debug_Chemicals|Any CPU
+		Debug_Pesticides|Any CPU = Debug_Pesticides|Any CPU
+		Debug_Veterinary|Any CPU = Debug_Veterinary|Any CPU
+		Release_Chemicals|Any CPU = Release_Chemicals|Any CPU
+		Release_Pesticides|Any CPU = Release_Pesticides|Any CPU
+		Release_Veterinary|Any CPU = Release_Veterinary|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4161C2CB-0259-4334-93A6-17DB59E0F623}.Debug_Chemicals|Any CPU.ActiveCfg = Debug_Chemicals|Any CPU
+		{4161C2CB-0259-4334-93A6-17DB59E0F623}.Debug_Chemicals|Any CPU.Build.0 = Debug_Chemicals|Any CPU
+		{4161C2CB-0259-4334-93A6-17DB59E0F623}.Debug_Pesticides|Any CPU.ActiveCfg = Debug_Pesticides|Any CPU
+		{4161C2CB-0259-4334-93A6-17DB59E0F623}.Debug_Pesticides|Any CPU.Build.0 = Debug_Pesticides|Any CPU
+		{4161C2CB-0259-4334-93A6-17DB59E0F623}.Debug_Veterinary|Any CPU.ActiveCfg = Debug_Veterinary|Any CPU
+		{4161C2CB-0259-4334-93A6-17DB59E0F623}.Debug_Veterinary|Any CPU.Build.0 = Debug_Veterinary|Any CPU
+		{4161C2CB-0259-4334-93A6-17DB59E0F623}.Release_Chemicals|Any CPU.ActiveCfg = Release_Chemicals|Any CPU
+		{4161C2CB-0259-4334-93A6-17DB59E0F623}.Release_Chemicals|Any CPU.Build.0 = Release_Chemicals|Any CPU
+		{4161C2CB-0259-4334-93A6-17DB59E0F623}.Release_Pesticides|Any CPU.ActiveCfg = Release_Pesticides|Any CPU
+		{4161C2CB-0259-4334-93A6-17DB59E0F623}.Release_Pesticides|Any CPU.Build.0 = Release_Pesticides|Any CPU
+		{4161C2CB-0259-4334-93A6-17DB59E0F623}.Release_Veterinary|Any CPU.ActiveCfg = Release_Veterinary|Any CPU
+		{4161C2CB-0259-4334-93A6-17DB59E0F623}.Release_Veterinary|Any CPU.Build.0 = Release_Veterinary|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F9748CC-D512-4292-8EE3-F20BA209B13E}
+	EndGlobalSection
+EndGlobal
