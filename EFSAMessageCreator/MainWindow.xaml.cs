@@ -114,33 +114,33 @@ namespace EFSAMessageCreator
         /// <param name="e"></param>
         private void btnCreateXML_Click(object sender, RoutedEventArgs e)
         {
-            Int32 limit = 0;
-            if (Int32.TryParse(tbxLimit.Text, out limit))
-            {
                 try
                 {
-                    String XSDFileFullName = "EFSAMessageCreator." + App.Schema.Trim();
-                    String ElementMappingFileFullName = "EFSAMessageCreator." + App.ElementMappingFileName.Trim();
-
-                    XMLGeneration xmlGeneration
-                        = new XMLGeneration(
-                            this,
-                            XSDFileFullName,
-                            ElementMappingFileFullName,
-                            App.OutputXMLFileName,
-                            OutputXMLEncoding);
-
+                    CreateXML();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Please enter the number of records to limit to, or uncheck the checkbox");
-            }
+        }
+        #endregion
 
+        #region Create XML
+        /// <summary>
+        /// Create XML
+        /// </summary>
+        private void CreateXML()
+        {
+            String XSDFileFullName = "EFSAMessageCreator." + App.Schema.Trim();
+            String ElementMappingFileFullName = "EFSAMessageCreator." + App.ElementMappingFileName.Trim();
+
+            XMLGeneration xmlGeneration
+                = new XMLGeneration(
+                    this,
+                    XSDFileFullName,
+                    ElementMappingFileFullName,
+                    App.OutputXMLFileName,
+                    OutputXMLEncoding);
         }
         #endregion
 

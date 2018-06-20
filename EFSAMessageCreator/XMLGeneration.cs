@@ -366,15 +366,31 @@ namespace EFSAMessageCreator
                         {
                             if (givenString.IndexOf("=") > -1)
                             {
-                                List<SSDCompoundTypeValue> values = new List<SSDCompoundTypeValue>();
-                                SSDCompoundTypeValue ctv = new SSDCompoundTypeValue();
-                                ctv.name = givenString.Split("=".ToCharArray())[0];
-                                ctv.Value = givenString.Split("=".ToCharArray())[1];
-                                values.Add(ctv);
+                                // If there is a $ separator, there are multiple attributes
+                                string[] attributeArray;
+                                if (givenString.IndexOf("$") > -1)
+                                {
+                                    attributeArray = givenString.Split("$".ToCharArray());
+                                }
+                                else
+                                {
+                                    attributeArray = new String[1];
+                                    attributeArray[0] = givenString;
+                                }
 
+                                List<SSDCompoundTypeValue> values = new List<SSDCompoundTypeValue>();
+                                for (int i = 0; i < attributeArray.Length; i++)
+                                {
+                                    
+                                    SSDCompoundTypeValue ctv = new SSDCompoundTypeValue();
+                                    ctv.name = attributeArray[i].Split("=".ToCharArray())[0];
+                                    ctv.Value = attributeArray[i].Split("=".ToCharArray())[1];
+                                    values.Add(ctv);  
+                                }
                                 SSDCompoundType newSSDCompoundType = new SSDCompoundType();
                                 newSSDCompoundType.value = values.ToArray();
                                 prop.SetValue(oResult, newSSDCompoundType, null);
+
                             }
                             else
                             {
