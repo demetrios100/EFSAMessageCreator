@@ -2,409 +2,409 @@
 <ElementMappingEntries>
   <!--  Section A  -->
   <ElementMappingEntry>
-    <DbfColumnName>a01</DbfColumnName>
+    <DataColumnName>a01</DataColumnName>
     <XMLElementName>localOrgId</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>a02</DbfColumnName>
+    <DataColumnName>a02</DataColumnName>
     <XMLElementName>localOrgCountry</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>a03</DbfColumnName>
+    <DataColumnName>a03</DataColumnName>
     <XMLElementName>localOrgInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section B  -->
   <ElementMappingEntry>
-    <DbfColumnName>b01</DbfColumnName>
+    <DataColumnName>b01</DataColumnName>
     <XMLElementName>progId</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>b02</DbfColumnName>
+    <DataColumnName>b02</DataColumnName>
     <XMLElementName>progLegalRef</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>b03</DbfColumnName>
+    <DataColumnName>b03</DataColumnName>
     <XMLElementName>sampStrategy</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>b04</DbfColumnName>
+    <DataColumnName>b04</DataColumnName>
     <XMLElementName>progType</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>b05</DbfColumnName>
+    <DataColumnName>b05</DataColumnName>
     <XMLElementName>sampMethod</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>b06</DbfColumnName>
+    <DataColumnName>b06</DataColumnName>
     <XMLElementName>sampler</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>b07</DbfColumnName>
+    <DataColumnName>b07</DataColumnName>
     <XMLElementName>sampPoint</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>b08</DbfColumnName>
+    <DataColumnName>b08</DataColumnName>
     <XMLElementName>progInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section C  -->
   <ElementMappingEntry>
-    <DbfColumnName>c01</DbfColumnName>
+    <DataColumnName>c01</DataColumnName>
     <XMLElementName>sampEventId</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>c02</DbfColumnName>
+    <DataColumnName>c02</DataColumnName>
     <XMLElementName>sampUnitType</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>c03</DbfColumnName>
+    <DataColumnName>c03</DataColumnName>
     <XMLElementName>sampUnitSize</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>c04</DbfColumnName>
+    <DataColumnName>c04</DataColumnName>
     <XMLElementName>sampUnitSizeUnit</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>c05</DbfColumnName>
+    <DataColumnName>c05</DataColumnName>
     <XMLElementName>sampUnitIds</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>c06</DbfColumnName>
+    <DataColumnName>c06</DataColumnName>
     <XMLElementName>sampEventInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section D  -->
   <ElementMappingEntry>
-    <DbfColumnName>d01</DbfColumnName>
+    <DataColumnName>d01</DataColumnName>
     <XMLElementName>sampId</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>d02</DbfColumnName>
+    <DataColumnName>d02</DataColumnName>
     <XMLElementName>repCountry</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>d03</DbfColumnName>
+    <DataColumnName>d03</DataColumnName>
     <XMLElementName>sampCountry</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>d04</DbfColumnName>
+    <DataColumnName>d04</DataColumnName>
     <XMLElementName>sampArea</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>d05</DbfColumnName>
+    <DataColumnName>d05</DataColumnName>
     <XMLElementName>repYear</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>d06</DbfColumnName>
+    <DataColumnName>d06</DataColumnName>
     <XMLElementName>sampY</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>d07</DbfColumnName>
+    <DataColumnName>d07</DataColumnName>
     <XMLElementName>sampM</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>d08</DbfColumnName>
+    <DataColumnName>d08</DataColumnName>
     <XMLElementName>sampD</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>d09</DbfColumnName>
+    <DataColumnName>d09</DataColumnName>
     <XMLElementName>sampSize</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>d10</DbfColumnName>
+    <DataColumnName>d10</DataColumnName>
     <XMLElementName>sampSizeUnit</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>d11</DbfColumnName>
+    <DataColumnName>d11</DataColumnName>
     <XMLElementName>sampInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section E -->
   <ElementMappingEntry>
-    <DbfColumnName>e01</DbfColumnName>
+    <DataColumnName>e01</DataColumnName>
     <XMLElementName>sampMatType</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>e02</DbfColumnName>
+    <DataColumnName>e02</DataColumnName>
     <XMLElementName>sampMatCode</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>e03</DbfColumnName>
+    <DataColumnName>e03</DataColumnName>
     <XMLElementName>sampMatText</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>e04</DbfColumnName>
+    <DataColumnName>e04</DataColumnName>
     <XMLElementName>origCountry</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>e05</DbfColumnName>
+    <DataColumnName>e05</DataColumnName>
     <XMLElementName>origArea</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>e06</DbfColumnName>
+    <DataColumnName>e06</DataColumnName>
     <XMLElementName>origFishAreaCode</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>e07</DbfColumnName>
+    <DataColumnName>e07</DataColumnName>
     <XMLElementName>origFishAreaText</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>e08</DbfColumnName>
+    <DataColumnName>e08</DataColumnName>
     <XMLElementName>procCountry</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>e09</DbfColumnName>
+    <DataColumnName>e09</DataColumnName>
     <XMLElementName>procArea</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>e10</DbfColumnName>
+    <DataColumnName>e10</DataColumnName>
     <XMLElementName>sampMatInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section F -->
   <ElementMappingEntry>
-    <DbfColumnName>f01</DbfColumnName>
+    <DataColumnName>f01</DataColumnName>
     <XMLElementName>sampAnId</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>f02</DbfColumnName>
+    <DataColumnName>f02</DataColumnName>
     <XMLElementName>sampAnRefTime</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>f03</DbfColumnName>
+    <DataColumnName>f03</DataColumnName>
     <XMLElementName>analysisY</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>f04</DbfColumnName>
+    <DataColumnName>f04</DataColumnName>
     <XMLElementName>analysisM</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>f05</DbfColumnName>
+    <DataColumnName>f05</DataColumnName>
     <XMLElementName>analysisD</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>f06</DbfColumnName>
+    <DataColumnName>f06</DataColumnName>
     <XMLElementName>sampAnInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section G -->
   <ElementMappingEntry>
-    <DbfColumnName>g01</DbfColumnName>
+    <DataColumnName>g01</DataColumnName>
     <XMLElementName>anMatCode</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>g02</DbfColumnName>
+    <DataColumnName>g02</DataColumnName>
     <XMLElementName>anMatText</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>g03</DbfColumnName>
+    <DataColumnName>g03</DataColumnName>
     <XMLElementName>anMatInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section H -->
   <ElementMappingEntry>
-    <DbfColumnName>h01</DbfColumnName>
+    <DataColumnName>h01</DataColumnName>
     <XMLElementName>anPortSeq</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>h02</DbfColumnName>
+    <DataColumnName>h02</DataColumnName>
     <XMLElementName>anPortSize</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>h03</DbfColumnName>
+    <DataColumnName>h03</DataColumnName>
     <XMLElementName>anPortSizeUnit</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>h04</DbfColumnName>
+    <DataColumnName>h04</DataColumnName>
     <XMLElementName>anPortInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section I -->
   <ElementMappingEntry>
-    <DbfColumnName>i01</DbfColumnName>
+    <DataColumnName>i01</DataColumnName>
     <XMLElementName>isolId</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>i02</DbfColumnName>
+    <DataColumnName>i02</DataColumnName>
     <XMLElementName>isolParamCode</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>i03</DbfColumnName>
+    <DataColumnName>i03</DataColumnName>
     <XMLElementName>isolParamText</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>i04</DbfColumnName>
+    <DataColumnName>i04</DataColumnName>
     <XMLElementName>isolInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section J -->
   <ElementMappingEntry>
-    <DbfColumnName>j01</DbfColumnName>
+    <DataColumnName>j01</DataColumnName>
     <XMLElementName>labId</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>j02</DbfColumnName>
+    <DataColumnName>j02</DataColumnName>
     <XMLElementName>labAccred</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>j03</DbfColumnName>
+    <DataColumnName>j03</DataColumnName>
     <XMLElementName>labCountry</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>j04</DbfColumnName>
+    <DataColumnName>j04</DataColumnName>
     <XMLElementName>labInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section K -->
   <ElementMappingEntry>
-    <DbfColumnName>k01</DbfColumnName>
+    <DataColumnName>k01</DataColumnName>
     <XMLElementName>paramType</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>k02</DbfColumnName>
+    <DataColumnName>k02</DataColumnName>
     <XMLElementName>paramCode</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>k03</DbfColumnName>
+    <DataColumnName>k03</DataColumnName>
     <XMLElementName>paramText</XMLElementName>
   </ElementMappingEntry>
   <!--  Section L -->
   <ElementMappingEntry>
-    <DbfColumnName>l01</DbfColumnName>
+    <DataColumnName>l01</DataColumnName>
     <XMLElementName>anMethRefId</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>l02</DbfColumnName>
+    <DataColumnName>l02</DataColumnName>
     <XMLElementName>anMethRefCode</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>l03</DbfColumnName>
+    <DataColumnName>l03</DataColumnName>
     <XMLElementName>anMethType</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>l04</DbfColumnName>
+    <DataColumnName>l04</DataColumnName>
     <XMLElementName>anMethCode</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>l05</DbfColumnName>
+    <DataColumnName>l05</DataColumnName>
     <XMLElementName>anMethText</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>l06</DbfColumnName>
+    <DataColumnName>l06</DataColumnName>
     <XMLElementName>anMethInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section M  -->
   <ElementMappingEntry>
-    <DbfColumnName>m01</DbfColumnName>
+    <DataColumnName>m01</DataColumnName>
     <XMLElementName>resId</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m02</DbfColumnName>
+    <DataColumnName>m02</DataColumnName>
     <XMLElementName>accredProc</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m03</DbfColumnName>
+    <DataColumnName>m03</DataColumnName>
     <XMLElementName>resUnit</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m04</DbfColumnName>
+    <DataColumnName>m04</DataColumnName>
     <XMLElementName>resLOD</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m05</DbfColumnName>
+    <DataColumnName>m05</DataColumnName>
     <XMLElementName>resLOQ</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m06</DbfColumnName>
+    <DataColumnName>m06</DataColumnName>
     <XMLElementName>resLLWR</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m07</DbfColumnName>
+    <DataColumnName>m07</DataColumnName>
     <XMLElementName>resULWR</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m08</DbfColumnName>
+    <DataColumnName>m08</DataColumnName>
     <XMLElementName>CCalpha</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m09</DbfColumnName>
+    <DataColumnName>m09</DataColumnName>
     <XMLElementName>CCbeta</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m10</DbfColumnName>
+    <DataColumnName>m10</DataColumnName>
     <XMLElementName>resVal</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m11</DbfColumnName>
+    <DataColumnName>m11</DataColumnName>
     <XMLElementName>resValRec</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m12</DbfColumnName>
+    <DataColumnName>m12</DataColumnName>
     <XMLElementName>resValRecCorr</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m13</DbfColumnName>
+    <DataColumnName>m13</DataColumnName>
     <XMLElementName>exprResPerc</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m14</DbfColumnName>
+    <DataColumnName>m14</DataColumnName>
     <XMLElementName>exprResType</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m15</DbfColumnName>
+    <DataColumnName>m15</DataColumnName>
     <XMLElementName>resQualValue</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m16</DbfColumnName>
+    <DataColumnName>m16</DataColumnName>
     <XMLElementName>resType</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m17</DbfColumnName>
+    <DataColumnName>m17</DataColumnName>
     <XMLElementName>resValUncert</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m18</DbfColumnName>
+    <DataColumnName>m18</DataColumnName>
     <XMLElementName>resValUncertSD</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m19</DbfColumnName>
+    <DataColumnName>m19</DataColumnName>
     <XMLElementName>resRefId</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>m20</DbfColumnName>
+    <DataColumnName>m20</DataColumnName>
     <XMLElementName>resInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section N  -->
   <ElementMappingEntry>
-    <DbfColumnName>n01</DbfColumnName>
+    <DataColumnName>n01</DataColumnName>
     <XMLElementName>evalLowLimit</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>n02</DbfColumnName>
+    <DataColumnName>n02</DataColumnName>
     <XMLElementName>evalHighLimit</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>n03</DbfColumnName>
+    <DataColumnName>n03</DataColumnName>
     <XMLElementName>evalLimitType</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>n04</DbfColumnName>
+    <DataColumnName>n04</DataColumnName>
     <XMLElementName>evalCode</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>n05</DbfColumnName>
+    <DataColumnName>n05</DataColumnName>
     <XMLElementName>actTakenCode</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>n06</DbfColumnName>
+    <DataColumnName>n06</DataColumnName>
     <XMLElementName>evalInfo</XMLElementName>
   </ElementMappingEntry>
   <!--  Section F  -->
   <ElementMappingEntry>
-    <DbfColumnName>f19</DbfColumnName>
+    <DataColumnName>f19</DataColumnName>
     <XMLElementName>f19</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>f21</DbfColumnName>
+    <DataColumnName>f21</DataColumnName>
     <XMLElementName>f21</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>FOODEX2</DbfColumnName>
+    <DataColumnName>FOODEX2</DataColumnName>
     <XMLElementName>FOODEX2</XMLElementName>
   </ElementMappingEntry>
   <ElementMappingEntry>
-    <DbfColumnName>NOTUSED</DbfColumnName>
+    <DataColumnName>NOTUSED</DataColumnName>
     <XMLElementName>amType</XMLElementName>
   </ElementMappingEntry>
 </ElementMappingEntries>

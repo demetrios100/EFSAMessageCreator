@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Height="500"
         MinWidth="500" 
-        Closed="Window_Closed" 
+        Closed="Window_Closed"
         >
     <Grid>
         <Grid.RowDefinitions>
@@ -43,20 +43,20 @@
         </Grid>
 
         <DockPanel Grid.Row="1" HorizontalAlignment="Center" Margin="10">
-            <TextBox x:Name="tbxDataFile"
+            <TextBox x:Name="DataFileTextBox"
                IsReadOnly="True"
                FontWeight="Bold" 
                HorizontalAlignment="Left" Padding="20,0,20,0"
                Margin="10,20,0,0" 
-               VerticalAlignment="Top" TextChanged="tbxDataFile_TextChanged" Loaded="tbxDataFile_Loaded"/>
-            <Button x:Name="btnSelect" 
+               VerticalAlignment="Top" TextChanged="DataFileTextBox_TextChanged" Loaded="DataFileTextBox_Loaded"/>
+            <Button x:Name="SelectButton" 
                 Content="Select Data File" 
                 Background="{StaticResource buttonStyleGradient}"
                 HorizontalAlignment="Left" 
                 Margin="20,20,0,0" 
                 VerticalAlignment="Top" 
                 Width="100" 
-                Click="btnSelect_Click"/>
+                Click="SelectButton_Click"/>
         </DockPanel>
 
         <DockPanel Name="pnlDelimitedOptions" Grid.Row="2" VerticalAlignment="Center"  HorizontalAlignment="Center" Margin="10"  Visibility="Collapsed" Background="AliceBlue">
@@ -70,7 +70,7 @@
                    HorizontalContentAlignment="Center" />
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10,0,20,5">
                         <Label Content="Delimiter:"></Label>
-                        <ComboBox Name="cbxDelimiter" Width="275" Height="25" />
+                        <ComboBox Name="DelimiterCheckBox" Width="275" Height="25" />
                     </StackPanel>
                 </StackPanel>
             </Border>
@@ -78,21 +78,21 @@
 
         <DockPanel Grid.Row="3" HorizontalAlignment="Center" Margin="10">
             <CheckBox 
-                Name="cbxLimit" 
+                Name="LimitCheckBox" 
                 Height="25"
                 Content="For testing, limit the number of records generated" 
-                Margin="0" Checked="cbxLimit_Checked" Unchecked="cbxLimit_Unchecked" />
-            <TextBox Name="tbxLimit" Visibility="Collapsed" Width="100" Margin="0,-5,0,0" Height="25" VerticalContentAlignment="Center"></TextBox>
+                Margin="0" Checked="LimitCheckBox_Checked" Unchecked="LimitCheckBox_Unchecked" />
+            <TextBox Name="LimitTextBox" Visibility="Collapsed" Width="100" Margin="0,-5,0,0" Height="25" VerticalContentAlignment="Center"></TextBox>
         </DockPanel>
 
-        <Button Name="btnCreateXML"                    
+        <Button Name="CreateXMLButton"                    
                 Grid.Row="4" 
                 Content="Create XML" 
                 Background="{StaticResource buttonStyleGradient}"
                 HorizontalAlignment="Center"
                 Width="75" Height="24"
-                Click="btnCreateXML_Click"/>
-        <Label Grid.Row="5" Name="lblStatus" Foreground="Red" HorizontalAlignment="Center" FontWeight="Bold"></Label>
+                Click="CreateXMLButton_Click"/>
+        <Label Grid.Row="5" Name="StatusLabel" Foreground="Red" HorizontalAlignment="Center" FontWeight="Bold"></Label>
         <ProgressBar 
             Grid.Row="6"
             x:Name="pbrDecoding" 
@@ -101,7 +101,7 @@
             VerticalAlignment="Top" 
             HorizontalAlignment="Center"  
             Grid.Column="1" />
-        <Label Grid.Row="7" x:Name="lblSchema" FontSize="8" Margin="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
+        <Label Grid.Row="7" x:Name="SchemaLabel" FontSize="8" Margin="0" VerticalAlignment="Bottom" HorizontalAlignment="Right" />
     </Grid>
 
 

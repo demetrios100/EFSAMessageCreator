@@ -7,11 +7,29 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
+
+[assembly: AssemblyDescription("This Utility enables the preparation of data for submission to EFSA")]
+#if Debug_Chemicals
 [assembly: AssemblyTitle("Chemicals")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Chemicals")]
+[assembly: AssemblyConfiguration("Debug_Chemicals")]
+#elif Debug_Pesticides
+[assembly: AssemblyTitle("Pesticides")]
+[assembly: AssemblyConfiguration("Debug_Pesticides")]
+#elif Debug_Veterinary
+[assembly: AssemblyTitle("Veterinary")]
+[assembly: AssemblyConfiguration("Debug_Veterinary")]
+#elif Release_Chemicals
+[assembly: AssemblyTitle("Chemicals")]
+[assembly: AssemblyConfiguration("Debug_Chemicals")]
+#elif Release_Pesticides
+[assembly: AssemblyTitle("Pesticides")]
+[assembly: AssemblyConfiguration("Debug_Pesticides")]
+#elif Release_Veterinary
+[assembly: AssemblyTitle("Veterinary")]
+[assembly: AssemblyConfiguration("Debug_Veterinary")]
+#endif
+[assembly: AssemblyCompany("EFSA Users Group")]
+[assembly: AssemblyProduct("EFSA Message Creator")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -50,6 +68,7 @@ using System.Windows;
 //
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+ [assembly: AssemblyVersion("1.2.*")]
+//[assembly: AssemblyVersion("1.0.0.0")]
+//[assembly: AssemblyFileVersion("1.0.0.0")]
+

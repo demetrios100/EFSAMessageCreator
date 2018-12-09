@@ -7,7 +7,13 @@
     <ProjectGuid>{4161C2CB-0259-4334-93A6-17DB59E0F623}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>EFSAMessageCreator</RootNamespace>
-    <AssemblyName>EFSAMessageCreator</AssemblyName>
+    <!--<AssemblyName>EFSAMessageCreator</AssemblyName>-->
+    <AssemblyName Condition="'$(Configuration)'=='Debug_Chemicals'">Chemicals</AssemblyName>
+    <AssemblyName Condition="'$(Configuration)'=='Debug_Pesticides'">Pesticides</AssemblyName>
+    <AssemblyName Condition="'$(Configuration)'=='Debug_Veterinary'">Veterinary</AssemblyName>
+    <AssemblyName Condition="'$(Configuration)'=='Release_Chemicals'">Chemicals</AssemblyName>
+    <AssemblyName Condition="'$(Configuration)'=='Release_Pesticides'">Pesticides</AssemblyName>
+    <AssemblyName Condition="'$(Configuration)'=='Release_Veterinary'">Veterinary</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -78,6 +84,10 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <AssemblyName>EFSAMessageCreator</AssemblyName>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -108,8 +118,8 @@
     <Compile Include="VMPR_WF2_schema.cs">
       <DependentUpon>VMPR_WF2_schema.xsd</DependentUpon>
     </Compile>
-    <Compile Include="WF2_pesticides_SSD1.cs">
-      <DependentUpon>WF2_pesticides_SSD1.xsd</DependentUpon>
+    <Compile Include="WF2_pesticides_SSD2.cs">
+      <DependentUpon>WF2_pesticides_SSD2.xsd</DependentUpon>
     </Compile>
     <Compile Include="XMLGeneration.cs" />
     <Page Include="MainWindow.xaml">
@@ -150,13 +160,17 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EmbeddedResource Include="WF2_pesticides_SSD1.xsd" />
     <EmbeddedResource Include="VMPR_WF2_schema.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WF2_pesticides_SSD2.xsd">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="efsalogo.png" />
@@ -165,22 +179,16 @@
     <Resource Include="sgl.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ElementMappingChemicals.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Chemicals.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pesticides.ico" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ElementMappingPesticidesSSD1.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ElementMappingVeterinary.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Veterinary.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ElementMapping.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

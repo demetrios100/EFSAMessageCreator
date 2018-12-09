@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2014 rel. 2 sp1 (http://www.altova.com) by - (EFSA) -->
+<!-- edited with XMLSpy v2018 sp1 (x64) (http://www.altova.com) by - (European Food Safety Authority (EFSA)) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="message">
 		<xs:complexType>
@@ -27,184 +27,67 @@
 	<xs:element name="result">
 		<xs:complexType>
 			<xs:all>
-				<xs:element name="resEvaluation">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1"/>
-							<xs:maxLength value="400"/>
-							<xs:pattern value=".*[^\s].*"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="anMethText" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="250"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="analysisY">
-					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="4"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="sampArea" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="400"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="labCode">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1"/>
-							<xs:maxLength value="100"/>
-							<xs:pattern value=".*[^\s].*"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="labSampCode">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1"/>
-							<xs:maxLength value="20"/>
-							<xs:pattern value=".*[^\s].*"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="moistPerc" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:decimal">
-							<xs:fractionDigits value="10"/>
-							<xs:totalDigits value="20"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="paramText" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="250"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="lotSize" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:decimal">
-							<xs:fractionDigits value="10"/>
-							<xs:totalDigits value="20"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="resLegalLimit" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:decimal">
-							<xs:fractionDigits value="10"/>
-							<xs:totalDigits value="20"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="expiryD" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="2"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="prodPack" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="400"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="procArea" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="400"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="lotSizeUnit" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="400"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="paramCode">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1"/>
-							<xs:maxLength value="400"/>
-							<xs:pattern value=".*[^\s].*"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="analysisD" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="2"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="progCode" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="20"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="prodCom" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="250"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="localOrg" minOccurs="0">
+				<xs:element name="localOrgId" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
 							<xs:maxLength value="100"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="resVal" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:decimal">
-							<xs:fractionDigits value="10"/>
-							<xs:totalDigits value="20"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="analysisM" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="2"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="sampY">
-					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="4"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="anMethRefCode" minOccurs="0">
+				<xs:element name="localOrgCountry" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
-							<xs:maxLength value="500"/>
+							<xs:maxLength value="400"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="resLOD" minOccurs="0">
+				<xs:element name="progId" minOccurs="0">
 					<xs:simpleType>
-						<xs:restriction base="xs:decimal">
-							<xs:fractionDigits value="10"/>
-							<xs:totalDigits value="20"/>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="100"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="progLegalRef">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="400"/>
+							<xs:pattern value=".*[^\s].*"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampStrategy">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="400"/>
+							<xs:pattern value=".*[^\s].*"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="progType">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="400"/>
+							<xs:pattern value=".*[^\s].*"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampMethod">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="400"/>
+							<xs:pattern value=".*[^\s].*"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampler" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
@@ -217,7 +100,52 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="resUnit">
+				<xs:element name="sampEventId" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="100"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampUnitType" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampUnitSize" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:fractionDigits value="10"/>
+							<xs:totalDigits value="20"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampUnitSizeUnit" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="100"/>
+							<xs:pattern value=".*[^\s].*"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="repCountry" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampCountry">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
 							<xs:minLength value="1"/>
@@ -226,7 +154,42 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="CCbeta" minOccurs="0">
+				<xs:element name="sampArea" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="repYear" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:totalDigits value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampY">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:totalDigits value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampM">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampD">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampSize" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:decimal">
 							<xs:fractionDigits value="10"/>
@@ -234,14 +197,23 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="labCountry" minOccurs="0">
+				<xs:element name="sampSizeUnit" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
 							<xs:maxLength value="400"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="EFSAParamCode" minOccurs="0">
+				<xs:element name="sampMatType">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="400"/>
+							<xs:pattern value=".*[^\s].*"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampMatText" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
 							<xs:maxLength value="250"/>
@@ -257,6 +229,27 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
+				<xs:element name="origArea" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="origFishAreaCode" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="origFishAreaText" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="250"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
 				<xs:element name="procCountry" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
@@ -264,10 +257,97 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="prodM" minOccurs="0">
+				<xs:element name="procArea" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampAnId" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="100"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="sampAnRefTime" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="analysisY">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:totalDigits value="4"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="analysisM" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:integer">
 							<xs:totalDigits value="2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="analysisD" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:totalDigits value="2"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="anMatText" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="250"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="anPortSeq" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="100"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="anPortSize" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:fractionDigits value="10"/>
+							<xs:totalDigits value="20"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="anPortSizeUnit" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="isolId" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="100"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="isolParamText" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="250"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="labId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="50"/>
+							<xs:pattern value=".*[^\s].*"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
@@ -280,18 +360,10 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="prodY" minOccurs="0">
+				<xs:element name="labCountry" minOccurs="0">
 					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="4"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="resValUncert" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:decimal">
-							<xs:fractionDigits value="10"/>
-							<xs:totalDigits value="20"/>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
@@ -304,7 +376,58 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="sampCountry">
+				<xs:element name="paramText" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="250"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="anMethRefId" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="50"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="anMethRefCode" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="anMethType" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="anMethText" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="250"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="resId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+							<xs:maxLength value="100"/>
+							<xs:pattern value=".*[^\s].*"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="accredProc" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="resUnit">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
 							<xs:minLength value="1"/>
@@ -313,24 +436,35 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="prodIngred" minOccurs="0">
+				<xs:element name="resLOD" minOccurs="0">
 					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="250"/>
+						<xs:restriction base="xs:decimal">
+							<xs:fractionDigits value="10"/>
+							<xs:totalDigits value="20"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="exprRes" minOccurs="0">
+				<xs:element name="resLOQ">
 					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="400"/>
+						<xs:restriction base="xs:decimal">
+							<xs:fractionDigits value="10"/>
+							<xs:totalDigits value="20"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="anMethCode" minOccurs="0">
+				<xs:element name="resLLWR" minOccurs="0">
 					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="400"/>
+						<xs:restriction base="xs:decimal">
+							<xs:fractionDigits value="10"/>
+							<xs:totalDigits value="20"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="resULWR" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:fractionDigits value="10"/>
+							<xs:totalDigits value="20"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
@@ -342,49 +476,7 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="resultCode">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1"/>
-							<xs:maxLength value="40"/>
-							<xs:pattern value=".*[^\s].*"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="actTakenCode" type="SSDRepeatableType" minOccurs="0"/>
-				<xs:element name="progSampStrategy">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1"/>
-							<xs:maxLength value="400"/>
-							<xs:pattern value=".*[^\s].*"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="prodD" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="2"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="origArea" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="400"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="prodCode">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1"/>
-							<xs:maxLength value="400"/>
-							<xs:pattern value=".*[^\s].*"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="fatPerc" minOccurs="0">
+				<xs:element name="CCbeta" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:decimal">
 							<xs:fractionDigits value="10"/>
@@ -392,101 +484,7 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="sampM">
-					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="2"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="progLegalRef">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1"/>
-							<xs:maxLength value="400"/>
-							<xs:pattern value=".*[^\s].*"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="resLegalLimitType" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="400"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="prodTreat">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1"/>
-							<xs:maxLength value="400"/>
-							<xs:pattern value=".*[^\s].*"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="prodBrandName" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="250"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="sampMethod">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1"/>
-							<xs:maxLength value="400"/>
-							<xs:pattern value=".*[^\s].*"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="resType">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1"/>
-							<xs:maxLength value="400"/>
-							<xs:pattern value=".*[^\s].*"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="sampleNum" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="10"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="localOrgCountry" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="400"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="expiryM" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="2"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="prodProdMeth">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:minLength value="1"/>
-							<xs:maxLength value="400"/>
-							<xs:pattern value=".*[^\s].*"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="prodText" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="250"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="resValUncertSD" minOccurs="0">
+				<xs:element name="resVal" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:decimal">
 							<xs:fractionDigits value="10"/>
@@ -494,7 +492,22 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="origFishAreaCode" minOccurs="0">
+				<xs:element name="resValRec" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:fractionDigits value="10"/>
+							<xs:totalDigits value="20"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="resValRecCorr" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="400"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="exprResType" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
 							<xs:maxLength value="400"/>
@@ -508,50 +521,7 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="resComm" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="250"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="expiryY" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="4"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="lang" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="400"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="resValRecCorr" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="400"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="resLOQ">
-					<xs:simpleType>
-						<xs:restriction base="xs:decimal">
-							<xs:fractionDigits value="10"/>
-							<xs:totalDigits value="20"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="labSubSampCode" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="4"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="progType">
+				<xs:element name="resType">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
 							<xs:minLength value="1"/>
@@ -560,14 +530,7 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="accredProc" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="400"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
-				<xs:element name="resValRec" minOccurs="0">
+				<xs:element name="resValUncert" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:decimal">
 							<xs:fractionDigits value="10"/>
@@ -575,34 +538,68 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="sampD">
+				<xs:element name="resValUncertSD" minOccurs="0">
 					<xs:simpleType>
-						<xs:restriction base="xs:integer">
-							<xs:totalDigits value="2"/>
+						<xs:restriction base="xs:decimal">
+							<xs:fractionDigits value="10"/>
+							<xs:totalDigits value="20"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="EFSAProdCode" minOccurs="0">
+				<xs:element name="evalLowLimit" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:fractionDigits value="10"/>
+							<xs:totalDigits value="20"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="evalHighLimit" minOccurs="0">
+					<xs:simpleType>
+						<xs:restriction base="xs:decimal">
+							<xs:fractionDigits value="10"/>
+							<xs:totalDigits value="20"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="evalLimitType" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
 							<xs:maxLength value="400"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="prodManuf" minOccurs="0">
+				<xs:element name="evalCode">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">
-							<xs:maxLength value="250"/>
+							<xs:minLength value="1"/>
+							<xs:maxLength value="400"/>
+							<xs:pattern value=".*[^\s].*"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="origFishAreaText" minOccurs="0">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="250"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
+				<xs:element name="actTakenCode" type="SSDRepeatableType" minOccurs="0"/>
+				<xs:element name="localOrgInfo" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="progInfo" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="sampUnitIds" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="sampEventInfo" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="sampInfo" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="sampMatCode" type="SSDCompoundType"/>
+				<xs:element name="sampMatInfo" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="sampAnInfo" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="anMatCode" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="anMatInfo" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="anPortInfo" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="isolParamCode" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="isolInfo" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="labInfo" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="paramCode" type="SSDCompoundType"/>
+				<xs:element name="anMethCode" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="anMethInfo" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="exprResPerc" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="resRefId" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="resInfo" type="SSDCompoundType" minOccurs="0"/>
+				<xs:element name="evalInfo" type="SSDCompoundType" minOccurs="0"/>
 				<xs:element name="amType" minOccurs="0">
 					<xs:simpleType>
 						<xs:restriction base="xs:string">

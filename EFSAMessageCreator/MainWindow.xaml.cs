@@ -1,31 +1,90 @@
-﻿#region using 
-using System;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Media.Imaging;
-using System.Configuration;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Media;
-#endregion
-
+﻿// <copyright file="MainWindow.xaml.cs" company="EFSAUsersGroup">Copyright (c) EFSA Users Group. All rights reserved.</copyright>
+// <author>Demetrios Ioannides</author>
+// <email>dvi1@columbia.edu</email>
+// <summary>The Main Window for the EFSA Message Creator Utility</summary>
 
 namespace EFSAMessageCreator
 {
+    #region using statements
+    using System;
+    using System.Configuration;
+    using System.IO;
+    using System.Linq;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Media;
+    using System.Windows.Media.Imaging;
+    #endregion
+
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// File Type
+    /// </summary>
+    public enum FileType
+    {
+        /// <summary>
+        /// DBF File
+        /// </summary>
+        DBF,
+
+        /// <summary>
+        /// Delimiter File
+        /// </summary>
+        Delimited
+    }
+
+    /// <summary>
+    /// Delimiter Type
+    /// </summary>
+    public enum DelimiterType
+    {
+        /// <summary>
+        /// Delimited with Comma with Quotes
+        /// </summary>
+        CommaWithQuotes,
+
+        /// <summary>
+        /// Delimited with Semicolon
+        /// </summary>
+        Semicolon,
+
+        /// <summary>
+        /// Delimited with Tab
+        /// </summary>
+        Tab,
+
+        /// <summary>
+        /// Delimited with Pipe (Vertical Bar)
+        /// </summary>
+        Pipe
+    }
+
+    /// <summary>
+    /// Interaction logic for the Main Window
     /// </summary>
     public partial class MainWindow : Window
     {
-        protected System.Text.Encoding OutputXMLEncoding = System.Text.Encoding.Unicode;
+        /// <summary>
+        /// The Encoding of the Output XML file
+        /// </summary>
+        private System.Text.Encoding outputXMLEncoding = System.Text.Encoding.Unicode;
 
+        /// <summary>
+        /// The Type of the Data File (Delimited or DBF)
+        /// </summary>
+        private FileType fileType;
+
+        /// <summary>
+        /// The Delimiter Type
+        /// </summary>
+        private DelimiterType delimiterType = DelimiterType.CommaWithQuotes;
 
         #region Initialization
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainWindow"/> class
+        /// </summary>
         public MainWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
 
             this.Title = App.ApplicationTitle;
             AccessText text = new AccessText();
@@ -37,11 +96,12 @@ namespace EFSAMessageCreator
             this.Icon = BitmapFrame.Create(iconUri);
             var bc = new BrushConverter();
             this.Background = (Brush)bc.ConvertFrom(App.ApplicationBackground);
-            lblSchema.Content = "Schema: " + App.Schema;
-
+            SchemaLabel.Content = "Schema: " + App.Schema;
 
             if (ConfigurationManager.AppSettings["datapath"] != null)
-                tbxDataFile.Text = ConfigurationManager.AppSettings["datapath"];
+            {
+                DataFileTextBox.Text = ConfigurationManager.AppSettings["datapath"];
+            }
 
             ComboBoxItem cbi;
             cbi = new ComboBoxItem
@@ -49,45 +109,44 @@ namespace EFSAMessageCreator
                 Name = "CommaWithQuotes",
                 Content = "Comma ,"
             };
-            cbxDelimiter.Items.Add(cbi);
+            DelimiterCheckBox.Items.Add(cbi);
 
             cbi = new ComboBoxItem
             {
                 Name = "Semicolon",
                 Content = "Semicolon ;"
             };
-            cbxDelimiter.Items.Add(cbi);
+            DelimiterCheckBox.Items.Add(cbi);
 
             cbi = new ComboBoxItem
             {
                 Name = "Tab",
                 Content = "Tab"
             };
-            cbxDelimiter.Items.Add(cbi);
+            DelimiterCheckBox.Items.Add(cbi);
 
             cbi = new ComboBoxItem
             {
                 Name = "Pipe",
                 Content = "Pipe (Vertical Bar) |"
             };
-            cbxDelimiter.Items.Add(cbi);
 
+            DelimiterCheckBox.Items.Add(cbi);
         }
-
         #endregion
 
         #region Select the Data File
         /// <summary>
-        /// Select the DBF File
+        /// Select the Data File
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnSelect_Click(object sender, RoutedEventArgs e)
+        /// <param name="sender">The Object sender</param>
+        /// <param name="e"> The Routed arguments</param>
+        private void SelectButton_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new System.Windows.Forms.OpenFileDialog();
             dialog.Filter = "Text files(*.txt) |*.txt| CSV Text files(*.csv) |*.csv| DBF files(*.dbf)|*.dbf| All files(*.*) | *.*";
             System.Windows.Forms.DialogResult result = dialog.ShowDialog();
-            tbxDataFile.Text = dialog.FileName;
+            DataFileTextBox.Text = dialog.FileName;
 
             if (ConfigurationManager.AppSettings["datapath"] == null)
             {
@@ -110,13 +169,16 @@ namespace EFSAMessageCreator
         /// <summary>
         /// Button creating XML
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnCreateXML_Click(object sender, RoutedEventArgs e)
+        /// <param name="sender">The Object sender</param>
+        /// <param name="e">The Routed Event arguments</param>
+        private void CreateXMLButton_Click(object sender, RoutedEventArgs e)
         {
                 try
                 {
-                    CreateXML();
+                    if (this.CheckFileType() == true)
+                    {
+                        this.CreateXML();
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -131,68 +193,98 @@ namespace EFSAMessageCreator
         /// </summary>
         private void CreateXML()
         {
-            String XSDFileFullName = "EFSAMessageCreator." + App.Schema.Trim();
-            String ElementMappingFileFullName = "EFSAMessageCreator." + App.ElementMappingFileName.Trim();
+            string xsdFileFullName = "EFSAMessageCreator." + App.Schema.Trim();
+            string elementMappingFileFullName = "EFSAMessageCreator." + App.ElementMappingFileName.Trim();
 
             XMLGeneration xmlGeneration
                 = new XMLGeneration(
                     this,
-                    XSDFileFullName,
-                    ElementMappingFileFullName,
+                    xsdFileFullName,
+                    elementMappingFileFullName,
                     App.OutputXMLFileName,
-                    OutputXMLEncoding);
+                    this.outputXMLEncoding,
+                    this.fileType,
+                    this.delimiterType,
+                    DataFileTextBox.Text.Trim());
         }
         #endregion
 
         #region Limit CheckBox Handlers
-        private void cbxLimit_Checked(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Limit CheckBox Checked Event Handler
+        /// </summary>
+        /// <param name="sender">The Object Sender</param>
+        /// <param name="e">The Routed Event Arguments</param>
+        private void LimitCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            tbxLimit.Visibility = Visibility.Visible;
-            cbxLimit.Content = "For testing, limit the number of records generated to ";
+            LimitTextBox.Visibility = Visibility.Visible;
+            LimitCheckBox.Content = "For testing, limit the number of records generated to ";
         }
 
-        private void cbxLimit_Unchecked(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Limit CheckBox Unchecked Event Handler
+        /// </summary>
+        /// <param name="sender">The Object Sender</param>
+        /// <param name="e">The Routed Event Arguments</param>
+        private void LimitCheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            tbxLimit.Visibility = Visibility.Collapsed;
-            tbxLimit.Text = String.Empty;
-            cbxLimit.Content = "For testing, limit the number of records generated";
+            LimitTextBox.Visibility = Visibility.Collapsed;
+            LimitTextBox.Text = string.Empty;
+            LimitCheckBox.Content = "For testing, limit the number of records generated";
         }
-
         #endregion
 
         #region Closing
+        /// <summary>
+        /// Window Closed
+        /// </summary>
+        /// <param name="sender">The Sender Object </param>
+        /// <param name="e">The event Arguments</param>
         private void Window_Closed(object sender, EventArgs e)
         {
-            //Environment.Exit(0);
+            // Environment.Exit(0);
             Application.Current.Shutdown();
         }
         #endregion
 
         #region Delimited Options
-        private void tbxDataFile_TextChanged(object sender, TextChangedEventArgs e)
+        /// <summary>
+        /// The TextChanged event handler of DataFileTextBox
+        /// </summary>
+        /// <param name="sender">The sender object</param>
+        /// <param name="e">The Arguments</param>
+        private void DataFileTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            DetermineCSVOptionsDisplay();
+            this.DetermineCSVOptionsDisplay();
         }
 
-        private void tbxDataFile_Loaded(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// The DataFileTextBox loaded event handler
+        /// </summary>
+        /// <param name="sender">The Sender Object</param>
+        /// <param name="e">The Arguments</param>
+        private void DataFileTextBox_Loaded(object sender, RoutedEventArgs e)
         {
-            DetermineCSVOptionsDisplay();
+            this.DetermineCSVOptionsDisplay();
         }
 
+        /// <summary>
+        /// Determine whether the CSV Options are being Displayed
+        /// </summary>
         private void DetermineCSVOptionsDisplay()
         {
-            String[] csvExtensions = { ".csv", ".txt" };
+            string[] csvExtensions = { ".csv", ".txt" };
 
-            if (tbxDataFile.Text != String.Empty)
+            if (DataFileTextBox.Text != string.Empty)
             {
                 try
                 {
-                    FileInfo fiDataFile = new FileInfo(tbxDataFile.Text);
-                    if (fiDataFile.Extension.ToLower() == ".dbf")
+                    FileInfo fileInfoDataFile = new FileInfo(DataFileTextBox.Text);
+                    if (fileInfoDataFile.Extension.ToLower() == ".dbf")
                     {
                         pnlDelimitedOptions.Visibility = Visibility.Collapsed;
                     }
-                    else if (csvExtensions.Contains(fiDataFile.Extension.ToLower()))
+                    else if (csvExtensions.Contains(fileInfoDataFile.Extension.ToLower()))
                     {
                         pnlDelimitedOptions.Visibility = Visibility.Visible;
                     }
@@ -205,5 +297,66 @@ namespace EFSAMessageCreator
         }
         #endregion
 
+        #region Determine the File Type and ensure that if the file is delimited the delimiter has been specified
+        /// <summary>
+        /// Determine the File Type and ensure that if the file is delimited the delimiter has been specified
+        /// </summary>
+        /// <returns>A boolean indicating whether the file was selected successfully</returns>
+        private bool CheckFileType()
+        {
+            bool fileSelectionOK = true;
+
+            FileInfo fileInfoDataFile = new FileInfo(DataFileTextBox.Text.Trim());
+
+            string[] csvExtensions = { ".csv", ".txt" };
+
+            if (fileInfoDataFile.Extension.ToLower() == ".dbf")
+            {
+                this.fileType = FileType.DBF;
+            }
+            else if (csvExtensions.Contains(fileInfoDataFile.Extension.ToLower()))
+            {
+                this.fileType = FileType.Delimited;
+
+                this.delimiterType = this.GetDelimiterType();
+
+                if (DelimiterCheckBox.SelectedIndex == -1)
+                {
+                    fileSelectionOK = false;
+                    MessageBox.Show("Please select a Delimiter", "Delimiter Missing");
+                }
+            }
+            else
+            {
+                fileSelectionOK = false;
+                MessageBox.Show("Invalid file extension");
+            }
+
+            return fileSelectionOK;
+        }
+        #endregion
+
+        /// <summary>
+        /// Get the Delimiter Type
+        /// </summary>
+        /// <returns>The delimiter Type</returns>
+        private DelimiterType GetDelimiterType()
+        {
+            ComboBoxItem selectedDelimiter = (ComboBoxItem)DelimiterCheckBox.SelectedValue;
+
+            switch (selectedDelimiter.Name)
+            {
+                case "CommaWithQuotes":
+                    return DelimiterType.CommaWithQuotes;
+                case "Pipe":
+                    return DelimiterType.Pipe;
+                case "Semicolon":
+                    return DelimiterType.Semicolon;
+                case "Tab":
+                    return DelimiterType.Tab;
+                default:
+                    return DelimiterType.CommaWithQuotes;
+            }
+        }
     }
 }
